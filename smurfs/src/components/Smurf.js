@@ -4,11 +4,11 @@ const Smurf = props => {
     return (
         <>
             <hr/>
-            <p>{props.smurf.name}</p>
-            <p>{props.smurf.age}</p>
-            <p>{props.smurf.height}</p>
+            <p>Smurf Name: {props.smurf.name}</p>
+            <p>Age: {props.smurf.age}</p>
+            <p>Height: {props.smurf.height}</p>
         </>
-    )
-}
+    );
+};
 
 export default Smurf

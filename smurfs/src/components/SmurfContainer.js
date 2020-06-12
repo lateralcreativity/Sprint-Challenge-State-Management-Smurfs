@@ -1,11 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { getData } from '../actions';
 import Smurf from './Smurf';
+import { useEffect } from 'react';
 
 
 const SmurfContainer = props => {
-    useEffect(() => props.getData(), [])
+    const getData = props.getData
+    useEffect(() => getData(), [getData])
 
     return (
         <>
@@ -15,13 +17,13 @@ const SmurfContainer = props => {
                 )
             })}
         </>
-    )
-}
+    );
+};
 
 const mapStateToProps = state => {
     return {
         smurfs: state.smurfs
-    }
-}
+    };
+};
 
 export default connect(mapStateToProps, { getData })(SmurfContainer)
